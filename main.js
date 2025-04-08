@@ -80,5 +80,15 @@ function listMovies() {
     }
 }
 
+function watchedMovie() {
+    const movieTitle = prompt("Enter the title of the movie you watched:");
+    const movie = movies.find(movie => movie.title.toLowerCase() === movieTitle.toLowerCase());
+    if (movie) {
+        movie.watched = true;
+        alert(`You have marked "${movie.title}" as watched.`);
+    } else {
+        alert("Movie not found.");
+    }
+}
 
 movies();
