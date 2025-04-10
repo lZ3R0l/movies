@@ -4,7 +4,7 @@ const movies = [
     { title: 'Fast & Furious', director: 'Rob Cohen', watched: true },
 ]
 
-function movies() {
+function movieTracker() {
     let choice
 
     do {
@@ -40,7 +40,7 @@ function addMovie() {
     const movieDirector = prompt("Enter movie director:");
     if (movieTitle && movieDirector) {
         movies.push({ title: movieTitle, director: movieDirector, watched: false });
-        alert(`Movie "${title}" by ${director} has been added.`);
+        alert(`Movie "${movieTitle}" by ${movieDirector} has been added.`);
     } else {
         alert("Invalid input. Both title and director are required.");
     }
@@ -91,4 +91,4 @@ function watchedMovie() {
     }
 }
 
-movies();
+movieTracker();
